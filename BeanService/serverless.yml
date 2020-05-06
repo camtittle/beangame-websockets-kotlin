@@ -7,15 +7,21 @@ provider:
   region: eu-central-1
 
 package:
-  artifact: build/libs/hello-dev-all.jar
+  artifact: build/libs/beanservice-dev-all.jar
 
 functions:
   onConnect:
-    handler: com.camtittle.beanservice.ConnectHandler
+    handler: com.camtittle.beanservice.handler.ConnectHandler
     events:
       - websocket:
           route: $connect
           routeResponseSelectionExpression: $default
+
+  onDisconnect:
+    handler: com.camtittle.beanservice.handler.DisconnectHandler
+    events:
+     - websocket:
+        route: $disconnect
 
 resources:
   Resources:

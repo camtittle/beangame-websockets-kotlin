@@ -10,9 +10,21 @@ object ConnectionRepository {
     private val LOG = LogManager.getLogger(javaClass.simpleName)
 
     fun addConnection(id: String) {
-        val connection = WebsocketClient(id, "Ongo")
-
+        val connection = WebsocketClient()
+        connection.connectionId = id
+        connection.username = "Ongo"
         LOG.info("Putting connection to DynamoDB table with ID ${connection.connectionId}")
         DynamoDbService.put(connection)
+    }
+
+    fun removeConnection(id: String) {
+        val connection = WebsocketClient()
+        connection.connectionId = id
+        LOG.info("Deleting connection from DynamoDB table with ID ${connection.connectionId}")
+        DynamoDbService.delete(connection)
+    }
+
+    fun getAll(): List<WebsocketClient> {
+        return DynamoDbService.scan(WebsocketClient::class.java)
     }
 }

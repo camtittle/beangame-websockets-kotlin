@@ -40,6 +40,8 @@ dependencies {
   implementation "org.jetbrains.kotlin:kotlin-stdlib"
   implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.772')
   implementation 'com.amazonaws:aws-java-sdk-dynamodb'
+  implementation 'com.amazonaws:aws-java-sdk-apigatewaymanagementapi'
+  implementation 'com.google.code.gson:gson:2.8.6'
   compile group: 'com.amazonaws', name: 'aws-lambda-java-core', version:'1.2.0'
   compile group: 'com.amazonaws', name: 'aws-lambda-java-log4j2', version:'1.0.0'
   compile group: 'com.amazonaws', name: 'aws-lambda-java-events', version:'2.2.7'
