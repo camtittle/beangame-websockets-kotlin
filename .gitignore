@@ -1,0 +1,22 @@
+*.class
+.gradle
+/build/
+/bin/
+/.settings/
+.project
+.classpath
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Serverless directories
+.serverless
+
+BeanService/.idea/
+BeanService/.dynamodb/
+BeanService/build/
+BeanService/node_modules/
+.idea/
+BeanService/shared-local-instance.db

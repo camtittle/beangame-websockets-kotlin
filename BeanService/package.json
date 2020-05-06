@@ -1,0 +1,17 @@
+{
+  "name": "beanservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "serverless-dynamodb-local": "^0.2.39"
+  },
+  "devDependencies": {
+    "serverless-offline": "file:../../../serverless-offline-java"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
